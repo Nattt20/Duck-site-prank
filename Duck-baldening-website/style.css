@@ -1,0 +1,169 @@
+:root {
+  --primary: #5d678e;     /* Soft coral */
+  --secondary: #7986b9;   /* Muted orange-red */
+  --background: #f1f1ff;  /* Light cream */
+  --card-bg: #f0f8ff;     /* Very pale peach */
+  --border: #f8faff;      /* Light warm pink */
+  --text: #858585;        /* Dark text */
+  --hover: #3b4362;       /* Darker coral */
+}
+
+/* Global styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #eaf0fd, var(--border));
+  text-align: center;
+  padding: 40px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+  font-weight: 600;
+  color: #3b3b3b;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Navigation */
+nav {
+  background-color: #fff6f4;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: var(--secondary);
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--hover);
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Sections */
+section {
+  margin-bottom: 50px;
+}
+
+/* Section headings */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, var(--secondary), var(--primary));
+  -webkit-text-fill-color: transparent;
+}
+
+/* CEO cards */
+.ceo {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(246, 161, 146, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ceo:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(240, 130, 110, 0.2);
+}
+
+/* Team role cards */
+.role-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(246, 161, 146, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.role-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(240, 130, 110, 0.2);
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  background: #fff6f4;
+  padding: 14px 20px;
+  margin-bottom: 10px;
+  border-left: 4px solid var(--secondary);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+ul li:hover {
+  transform: translateX(5px);
+  background-color: #fff1ee;
+}
+
+/* Footer */
+footer {
+  background-color: #fff0ec;
+  color: #666;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+}
+
+
+.bio {
+  margin-top: 10px;
+  padding: 12px 16px;
+  background-color: #fff1ee;
+  border-left: 4px solid var(--secondary);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text);
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 1000px; /* large enough for visible bio */
+  opacity: 1;
+  overflow: hidden;
+}
+
+.bio.hidden {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 16px; /* keep left/right padding for smooth collapse */
+  margin-top: 0;
+  pointer-events: none;
+  user-select: none;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, margin-top 0.3s ease;
+}

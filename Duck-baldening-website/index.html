@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Duck Baldness Treatment Center</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>🦆 Duck Baldness Treatment Center</h1>
+    <p>Where ducks go fluffy... and leave fabulous. (or bald) </p>
+  </header>
+
+  <script>
+  (function() {
+    const password = "ducksgoquack"; // Set your password here
+    let userInput = prompt("Enter the secret password to enter the Duck Baldness Treatment Center:");
+
+    if (userInput !== password) {
+      alert("Wrong password! Access denied.");
+      document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px;'>Access Denied 🦆❌</h2>";
+    }
+  })();
+</script>
+
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#executive-team">CEOs</a>
+    <a href="#team-roles">Team Roles</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are a team of duck enthusiasts revolutionizing fluff removal. Our center provides elite spa treatments that gently transform every duck into a sleek, feather-free icon of style.</p>
+    </section>
+
+    <section id="executive-team">
+      <h2>Executive Team</h2>
+
+      <div class="ceo">
+        <h3 class="clickable">Nat</h3>
+        <p>CEO</p>
+        <div class="bio hidden">
+          <p>Nat is the visionary leader guiding the Duck Baldness Treatment Center with passion and dedication.</p>
+        </div>
+      </div>
+
+      <div class="ceo">
+        <h3 class="clickable">Elle</h3>
+        <p>CEO</p>
+        <div class="bio hidden">
+          <p>Elle specializes in duck treatments and advertising, ensuring every duck leaves fluffy and famous.</p>
+        </div>
+      </div>
+
+      <div class="ceo">
+        <h3 class="clickable">Zellie</h3>
+        <p>CEO</p>
+        <div class="bio hidden">
+          <p>Zellie leads marketing strategies that quack up our customer base.</p>
+        </div>
+      </div>
+
+      <div class="ceo">
+        <h3 class="clickable">Juliette</h3>
+        <p>CEO</p>
+        <div class="bio hidden">
+          <p>Juliette coordinates events and publicity, making sure every duck gets the spotlight.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="team-roles">
+      <h2>Our Team Roles</h2>
+
+      <div class="role-card">
+        <h3 class="clickable">Lead Duck Treatment & Advertising Officer</h3>
+        <p>Elle</p>
+        <div class="bio hidden">
+          <p>Elle is the master of duck treatments and advertising, blending care with creative marketing.</p>
+        </div>
+      </div>
+
+      <div class="role-card">
+        <h3 class="clickable">Event Coordinator and Publicity Officer</h3>
+        <p>Juliette</p>
+        <div class="bio hidden">
+          <p>Juliette handles event planning and publicity, ensuring maximum duck attendance.</p>
+        </div>
+      </div>
+
+      <div class="role-card">
+        <h3 class="clickable">Lead Coding and Hacking Officer</h3>
+        <p>Ivy</p>
+        <div class="bio hidden">
+          <p>Ivy codes and hacks systems to keep our duck data secure and our site running smoothly.</p>
+        </div>
+      </div>
+
+      <div class="role-card">
+        <h3 class="clickable">Lead Marketing Officer</h3>
+        <p>Zellie</p>
+        <div class="bio hidden">
+          <p>Zellie designs marketing campaigns that make ducks the talk of the town.</p>
+        </div>
+      </div>
+
+      <div class="role-card">
+        <h3 class="clickable">Lead Duck Therapy Officer</h3>
+        <p>Person</p>
+        <div class="bio hidden">
+          <p>Person specializes in therapeutic techniques to calm and comfort our feathered clients.</p>
+        </div>
+      </div>
+
+      <div class="role-card">
+        <h3 class="clickable">Lead Avian Health Technician and Interviewer Officer</h3>
+        <p>Dublin</p>
+        <div class="bio hidden">
+          <p>Dublin ensures all ducks are healthy and conducts interviews to understand their needs.</p>
+        </div>
+      </div>
+
+      <div class="role-card">
+        <h3 class="clickable">Lead Customer Service Officer</h3>
+        <p>Nat</p>
+        <div class="bio hidden">
+          <p>Nat manages customer relationships and ensures top-notch service.</p>
+        </div>
+      </div>
+
+      <div class="role-card">
+        <h3 class="clickable">Lead Duck Groomer Officer</h3>
+        <p>Audrey</p>
+        <div class="bio hidden">
+          <p>Audrey is responsible for the final grooming touches that keep ducks looking their best.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>✨ Luxury Duck Spa Massage</li>
+        <li>💈 Gentle Baldness Acceleration</li>
+        <li>🎨 Feather Art & Styling</li>
+        <li>🎤 Duck Therapy & Confidence Coaching</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: hello@duckbaldness.com</p>
+      <p>Location: Secret Pond, Unit 42, Ducktown</p>
+      <p>We’re not responsible for any baldness, feather loss, or duck obsession. All ducks petted with love (and mischief).</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Duck Baldness Treatment Center. All ducks petted ethically. </p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.clickable').forEach(header => {
+      header.style.cursor = 'pointer';
+      header.addEventListener('click', () => {
+        const bio = header.nextElementSibling.nextElementSibling;
+        if (bio) {
+          bio.classList.toggle('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
